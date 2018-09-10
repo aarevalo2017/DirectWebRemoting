@@ -19,6 +19,9 @@
         Num1 : <input type="text" name="num1" id="num1" value="" /><br>
         Num2 : <input type="text" name="num2" id="num2" value="" /><br>
         <button id="sumar">Sumar</button>
+        <button id="getPersona">Obtener Persona</button>
+        <button id="agregarPersona">Agregar Persona</button>
+        <button id="listarPersonas">Listar Persona</button>
     </body>
     <script>
         $(document).ready(function () {
@@ -29,11 +32,33 @@
                     alert(data);
                 });
             });
+            $('#getPersona').click(function(){
+                Controlador.obtenerPersona(function(persona){
+                    console.log(persona);
+                    alert(persona.nombre);
+                });
+            });
+            $('#listarPersonas').click(function(){
+                Controlador.listadoPersonas(function(data){
+                    console.log(data);
+                });
+            });
             Controlador.doSomething({
                 callback: function (data) {
-                    alert(data);
+//                    alert(data);
                 }
             });
+            $('#agregarPersona').click(function(){
+                var persona = {
+                    nombre:"Alejandro Arevelo Sanchez",
+                    rut:"1-9",
+                    edad:38
+                };
+                Controlador.agregarPersona(persona, function(data){
+                    console.log(data);
+                });
+            });
+            
         });
     </script>
 </html>
