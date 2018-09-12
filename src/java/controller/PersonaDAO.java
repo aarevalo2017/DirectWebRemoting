@@ -10,19 +10,10 @@ import java.util.List;
 
 /**
  *
- * @author EC0021
+ * @author ec0021
  */
-public class Auto {
-    private String marca;
-    public static List<Auto> autos = new ArrayList();
+public class PersonaDAO {
 
-    public String getMarca() {
-        return marca;
-    }
+    public static List<Persona> listado = new ArrayList();
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-    
-    
 }

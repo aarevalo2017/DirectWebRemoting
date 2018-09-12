@@ -21,11 +21,11 @@ public class MyController {
     }
     
     public Persona obtenerPersona(){
-        return Persona.getInstance();
+        return null;
     }
 
     public List<Persona> listadoPersonas() {
-        return personas;
+        return PersonaDAO.listado;
     }
 
 //    public List<Persona> listadoPersonas(){
@@ -38,7 +38,8 @@ public class MyController {
 //    }
     
     public boolean agregarPersona(Persona persona){
-        return personas.add(persona);
+        persona.setId(PersonaDAO.listado.size());
+        return PersonaDAO.listado.add(persona);
     }
     
     public String agregarAuto(Auto auto){

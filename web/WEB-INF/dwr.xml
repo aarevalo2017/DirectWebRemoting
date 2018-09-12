@@ -9,7 +9,7 @@
         <convert converter="bean" match="controller.Auto">
         </convert>
         <convert converter="bean" match="controller.Persona">
-            <param name="exclude" value="id"/>
+            <!--<param name="exclude" value="id"/>-->
         </convert>
     </allow>
 </dwr>

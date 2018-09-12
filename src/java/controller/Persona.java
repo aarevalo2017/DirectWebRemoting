@@ -5,6 +5,9 @@
  */
 package controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author EC0021
@@ -15,33 +18,9 @@ public class Persona {
     private String nombre;
     private String rut;
     private int edad;
-    private static Persona instance;
-
-    public static Persona getInstance() {
-        if (instance == null) {
-            Persona persona = new Persona();
-            persona.setId(1);
-            persona.setEdad(38);
-            persona.setNombre("Alejandro Arevalo Sanchez");
-            persona.setRut("13965092-1");
-            return persona;
-        }
-        return instance;
-    }
-
-    public void setInstance(Persona instance) {
-        this.instance = instance;
-    }
 
     public Persona() {
     }
-
-//    public Persona(int id, String nombre, String rut, int edad) {
-//        this.id = id;
-//        this.nombre = nombre;
-//        this.rut = rut;
-//        this.edad = edad;
-//    }
 
     public int getId() {
         return id;
