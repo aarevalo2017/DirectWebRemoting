@@ -5,24 +5,38 @@
  */
 package controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author EC0021
  */
 public class Auto {
-    private String marca;
-    public static List<Auto> autos = new ArrayList();
 
-    public String getMarca() {
-        return marca;
-    }
+  private int id;
+  private String marca;
+  private String modelo;
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-    
-    
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getMarca() {
+    return marca;
+  }
+
+  public void setMarca(String marca) {
+    this.marca = marca;
+  }
+
+  public String getModelo() {
+    return modelo;
+  }
+
+  public void setModelo(String modelo) {
+    this.modelo = modelo;
+  }
+
 }

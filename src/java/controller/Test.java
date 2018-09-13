@@ -15,15 +15,6 @@ public class Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Auto a = new Auto();
-        a.setMarca("nissan");
-        Auto b = new Auto();
-        b.setMarca("honda");
-        Auto.autos.add(a);
-        Auto.autos.add(b);
-        Auto.autos.forEach(auto -> {
-            System.out.println(auto.getMarca());
-        });
     }
     
 }
